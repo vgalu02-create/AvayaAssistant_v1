@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>🎧 Avaya Assistant</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ========================= -->
+    <!-- ENCABEZADO -->
+    <!-- ========================= -->
+
+    <header>
+
+        <h1>🎧 Avaya Assistant</h1>
+
+        <h2 id="estado">
+            🟣 Conectado
+        </h2>
+
+        <div class="reloj">
+            00:00:00
+        </div>
+
+    </header>
+
+
+    <!-- ========================= -->
+    <!-- TURNO -->
+    <!-- ========================= -->
+
+    <section class="panel">
+
+        <button id="btnIniciar" class="btn btn-azul">
+            ▶ Iniciar turno
+        </button>
+
+        <button id="btnFinalizar" class="btn btn-rojo">
+            🏁 Finalizar turno
+        </button>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- TEMPORIZADOR -->
+    <!-- ========================= -->
+
+    <section class="panel">
+
+        <h3>⏳ Cliente en espera</h3>
+
+        <div id="contadorCliente" class="contador">
+
+            00:00
+
+        </div>
+
+        <div class="barra">
+
+            <div id="progreso"></div>
+
+        </div>
+
+        <div class="grid2">
+
+            <button id="btn2min" class="btn">
+                2 min
+            </button>
+
+            <button id="btn3min" class="btn">
+                3 min
+            </button>
+
+            <button id="btn5min" class="btn">
+                5 min
+            </button>
+
+            <button id="btn7min" class="btn">
+                7 min
+            </button>
+
+        </div>
+
+        <button id="btnCancelar"
+                class="btn btn-rojo">
+
+            Cancelar
+
+        </button>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- ESTADÍSTICAS -->
+    <!-- ========================= -->
+
+    <section class="panel">
+
+        <div class="tarjeta">
+
+            <span>🟢 Disponible</span>
+
+            <strong id="tiempoDisponible">
+                00:00:00
+            </strong>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <span>🟡 Ocupado</span>
+
+            <strong id="tiempoOcupado">
+                00:00:00
+            </strong>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <span>🔵 Descanso</span>
+
+            <strong id="tiempoDescanso">
+                00:00:00
+            </strong>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <span>🍔 Comida</span>
+
+            <strong id="tiempoComida">
+                00:00:00
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- BOTONES DE ESTADO -->
+    <!-- ========================= -->
+
+    <section class="panel grid2">
+
+        <button id="btnDisponible"
+                class="btn btn-verde">
+
+            🟢 Disponible
+
+        </button>
+
+        <button id="btnOcupado"
+                class="btn btn-amarillo">
+
+            🟡 Ocupado
+
+        </button>
+
+        <button id="btnDescanso"
+                class="btn btn-azul">
+
+            🔵 Descanso
+
+        </button>
+
+        <button id="btnComida"
+                class="btn btn-naranja">
+
+            🍔 Comida
+
+        </button>
+
+    </section>
+
+</div>
+<script src="estado.js"></script>
+<script src="almacenamiento.js"></script>
+<script src="avaya.js"></script>
+<script src="temporizador.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
