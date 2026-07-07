@@ -142,29 +142,37 @@ setInterval(function(){
         return;
     }
 
+    const ahora = Date.now();
+const segundos = Math.floor((ahora - ultimoCambio) / 1000);
+
+if (segundos <= 0) {
+    return;
+}
+
+ultimoCambio = ahora;
     switch(estadoActual){
 
         case "disponible":
 
-            tiempoDisponible++;
+            tiempoDisponible+= segundos;
 
         break;
 
         case "ocupado":
 
-            tiempoOcupado++;
+            tiempoOcupado+= segundos;
 
         break;
 
         case "descanso":
 
-            tiempoDescanso++;
+            tiempoDescanso+= segundos;
 
         break;
 
         case "comida":
 
-            tiempoComida++;
+            tiempoComida+= segundos;
 
         break;
 
@@ -186,6 +194,7 @@ btnIniciar.onclick=function(){
     }
 
     turnoIniciado=true;
+    ultimoCambio = Date.now();
 
     tiempoDisponible=0;
     tiempoOcupado=0;

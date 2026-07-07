@@ -12,3 +12,5 @@ let tiempoDisponible = 0;
 let tiempoOcupado = 0;
 let tiempoDescanso = 0;
 let tiempoComida = 0;
+
+let ultimoCambio = Date.now();
