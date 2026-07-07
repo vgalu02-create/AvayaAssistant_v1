@@ -66,16 +66,20 @@ function actualizarTemporizador(){
 
 function beep(){
 
-    try{
+    const audio = new Audio("assets/sonidos/beep.wav");
 
-        new Audio(
-            "https://actions.google.com/sounds/v1/alarms/beep_short.ogg"
-        ).play();
+    audio.volume = 1.0;
 
-    }catch(e){}
+    audio.currentTime = 0;
+
+    audio.play().catch(function(error){
+
+        console.log("No se pudo reproducir el sonido:", error);
+
+    });
+
 
 }
-
 // ======================================
 // INICIAR TEMPORIZADOR
 // ======================================
