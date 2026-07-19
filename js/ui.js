@@ -136,7 +136,7 @@ btnIniciar.addEventListener("click",()=>{
 
 btnFinalizar.addEventListener("click",()=>{
 
-    if(!motorTiempo.turno.iniciado){
+  if(!motorTiempo.iniciado){
 
         alert("No hay un turno iniciado.");
 
@@ -225,3 +225,18 @@ setInterval(actualizarPantalla,250);
 mostrarEstado("conectado");
 
 actualizarPantalla();
+// ======================================
+// CAMBIAR ESTADO
+// ======================================
+
+function cambiarEstado(nombre){
+
+    motorTiempo.cambiarEstado(nombre);
+
+    mostrarEstado(nombre);
+
+    actualizarTarjetas();
+
+    guardarDatos();
+
+}
